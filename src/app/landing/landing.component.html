@@ -1,0 +1,237 @@
+<div class="page-header" data-parallax="true" style="background-image: url('../assets/img/daniel-olahh.jpg');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <!-- <h1>The Kayakers</h1> -->
+            <h3>Adventure for all</h3>
+            <br />
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-outline-neutral btn-round">
+                <i class="fa fa-play"></i>Watch video</a>
+            <button type="button" class="btn btn-outline-neutral btn-round">Download</button>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="title">Let's talk product</h2>
+                    <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing
+                        meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll
+                        to get here. Add a button if you want the user to see more.</h5>
+                    <br>
+                    <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="icon icon-danger">
+                            <i class="nc-icon nc-album-2"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Beautiful Gallery</h4>
+                            <p class="description">Spend your time generating new ideas. You don't have to think of implementing.</p>
+                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="icon icon-danger">
+                            <i class="nc-icon nc-bulb-63"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">New Ideas</h4>
+                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient.</p>
+                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="icon icon-danger">
+                            <i class="nc-icon nc-chart-bar-32"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Statistics</h4>
+                            <p>Choose from a veriety of many colors resembling sugar paper pastels.</p>
+                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="icon icon-danger">
+                            <i class="nc-icon nc-sun-fog-29"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Delightful design</h4>
+                            <p>Find unique and handmade delightful designs related items directly from our sellers.</p>
+                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section section-dark text-center">
+        <div class="container">
+            <h2 class="title">Let's talk about us</h2>
+            <div class="row">
+                <div class="col-md-3" *ngFor="let team of teamList">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a href="#avatar">
+                                <img src="{{teamurl+team.image+'.jpg'}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <a href="#paper-kit">
+                                <div class="author">
+                                    <h4 class="card-title">{{team.name}}</h4>
+                                    <h6 class="card-category">{{team.role}}</h6>
+                                </div>
+                            </a>
+                            <!-- <p class="card-description text-center">
+                                Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money
+                                that you want without becoming very good at it.
+                            </p> -->
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="{{team.twitter}}" class="btn btn-link btn-just-icon btn-neutral">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="{{team.facebook}}" class="btn btn-link btn-just-icon btn-neutral">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="{{team.linkedin}}" class="btn btn-link btn-just-icon btn-neutral">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="{{team.instagram}}" class="btn btn-link btn-just-icon btn-neutral">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section text-center" style="background-color: lavender">
+        <div class="container">
+            <h2 class="title">Events</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-4" *ngFor="let event of eventList">
+                    <div class="card card-profile custom-card">
+                        <div class="card-cover" [ngStyle]="{ 'background-image': 'url(' + eventurl+event.imageurl + '.jpg)'}">
+                        </div>
+                        <!-- <div class="card-avatar border-white">
+                            <a href="#avatar">
+                                <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="...">
+                            </a>
+                        </div> -->
+                        <div class="card-body">
+                            <h4 class="card-title">{{event.eventName}}</h4>
+                            <h6 class="card-category">
+                                <i class="fa fa-inr"></i>{{event.cost}}</h6>
+                            <h6>{{event.date}}</h6>
+                            <p class="card-description">
+                                <a href="#paper-kit" class="btn btn-info btn-round">
+                                    <i class="fa fa-inr"></i>Book Now</a>
+                            </p>
+                            <div class="social-line text-center">
+                                <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-image text-center" style="background-image: url('assets/img/login-image.jpg');">
+        <div class="container">
+            <h2 class="title">Gallery</h2>
+            <div class="card card-raised page-carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item" [ngClass] = "{'active':i===0}" *ngFor="let gallery of galleryList; let i=index;">
+                            <img class="d-block img-fluid" src="{{galleryurl+gallery.imageurl+'.jpg'}}" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>{{gallery.text}}</p>
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="fa fa-angle-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="fa fa-angle-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section landing-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mr-auto ml-auto">
+                        <h2 class="text-center">Keep in touch?</h2>
+                        <form class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="nc-icon nc-single-02"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="nc-icon nc-email-85"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <label>Message</label>
+                            <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+                            <div class="row">
+                                <div class="col-md-4 mr-auto ml-auto">
+                                    <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

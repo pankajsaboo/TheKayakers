@@ -1,0 +1,33 @@
+[
+    {
+        "id":"1",
+        "altText":"image1",
+        "imageurl":"slider-img-1",
+        "text":"Kayaking Camp"
+    },
+    {
+        "id":"2",
+        "altText":"image2",
+        "imageurl":"slider-img-2",
+        "text":"Harishchandra Gad"
+    },
+    {
+        "id":"3",
+        "altText":"image3",
+        "imageurl":"slider-img-3",
+        "text":"Paragliding"
+    },
+    {
+        "id":"4",
+        "altText":"image4",
+        "imageurl":"slider-img-4",
+        "text":"Sunset"
+    },
+    {
+        "id":"5",
+        "altText":"image5",
+        "imageurl":"slider-img-5",
+        "text":"Kayaking Camp"
+    }
+
+]
